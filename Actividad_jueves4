@@ -1,0 +1,48 @@
+print("\nXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+print("Ejercicio 9: Tienda de ropa deportiva")
+print("TIENDA DEPORTIVA - SPORTZONE")
+
+# Pedimos el nombre del articulo deportivo
+articulo = input("\n¿Qué artículo deportivo quieres comprar? ")
+
+# Pedimos el precio del articulo
+precio_articulo = float(input(f"¿Cuánto cuesta el/la {articulo}? $"))
+
+# Pedimos la cantidad de artículos
+cantidad = int(input(f"¿Cuántas unidades de {articulo} quieres llevar? "))
+
+# Calculamos el subtotal
+subtotal = precio_articulo * cantidad
+
+# Preguntamos si quiere agregar un accesorio
+accesorio = input("¿Quieres agregar algún accesorio? (si/no): ")
+
+# Si el usuario quiere un accesorio
+if accesorio.lower() == "si":
+    nombre_accesorio = input("¿Qué accesorio quieres llevar? ")
+    precio_accesorio = float(input(f"¿Cuánto cuesta el/la {nombre_accesorio}? $"))
+    cantidad_accesorio = int(input(f"¿Cuántas unidades de {nombre_accesorio} quieres llevar? "))
+
+    # Calculamos el subtotal del accesorio
+    subtotal_accesorio = precio_accesorio * cantidad_accesorio
+
+    # Sumamos los dos subtotales
+    total = subtotal + subtotal_accesorio
+
+    print(f"Accesorio: {nombre_accesorio} - ${precio_accesorio:.2f}")
+    print(f"Cantidad de accesorios: {cantidad_accesorio}")
+    print(f"Subtotal de accesorios: ${subtotal_accesorio:.2f}")
+
+else:
+    # Si no quiere accesorio, el total es el subtotal
+    total = subtotal
+
+# Mostramos el ticket de compra
+print("\nXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
+print("TICKET DE COMPRA")
+print(f"Artículo: {articulo}")
+print(f"Precio por unidad: ${precio_articulo:.2f}")
+print(f"Cantidad: {cantidad}")
+print(f"Subtotal: ${subtotal:.2f}")
+print(f"TOTAL A PAGAR: ${total:.2f}")
+print("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")

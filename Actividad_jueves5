@@ -1,0 +1,31 @@
+print("\n*********************")
+print("Ejercicio 10: Reto final, ¿soy viral?")
+print("CALCULADORA DE ENGAGEMENT HECHO POR Camila")
+
+# --- AQUÍ ESTÁN TUS DATOS YA GUARDADOS ---
+usuario = "camsrnrdz"
+seguidores = 405
+likes = 50
+comentarios = 12 
+
+# Sumamos todas las interacciones: 50 + 12
+interacciones = likes + comentarios
+
+# Calculamos el engagement con la fórmula exacta
+engagement = (interacciones / seguidores) * 100
+
+print(f"\n****** RESULTADOS DE @{usuario} ******")
+print(f"Seguidores: {seguidores}")
+print(f"Interacciones totales (Likes + Comentarios): {interacciones}")
+
+# El :.2f muestra 2 decimales
+print(f"Engagement: {engagement:.2f}%")
+
+# La condición para saber si es bueno (arriba de 3%)
+if engagement > 3:
+    print("\nTu engagement está por encima del 3%.")
+    print("En marketing digital, esto se considera EXCELENTE. Eres viral")
+else:
+    print("\nTu engagement está por debajo del 3%. ¡A seguir publicando!")
+    
+print("\n*********************")
